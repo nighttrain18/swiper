@@ -1,0 +1,16 @@
+.swiper {
+    position: relative;
+    width: 1000px;
+    height: 700px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.swiper-el {
+    width: 100%;
+    position: absolute;
+}
+
+.swiper-el-animating {
+    transition: transform 200ms linear;
+}
