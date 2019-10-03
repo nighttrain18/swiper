@@ -1,20 +1,21 @@
-.swiper {
+.carousel__page-list {
     position: relative;
     width: 500px;
     height: 500px;
     overflow: hidden;
     margin: 0 auto;
+    list-style-type: none;
 }
 
-.swiper__page {
+.carousel__page-item {
     width: 100%;
     position: absolute;
 }
 
-.swiper__page-animating {
+.carousel__page-animating {
     transition: transform 200ms linear;
 }
 
-.swiper__pagination {
+.carousel__pagination {
     list-style-type: none;
 }
