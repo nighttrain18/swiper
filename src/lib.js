@@ -48,11 +48,7 @@ export const onMovingContinues = (
     {carouselPageShifts, setCarouselPageShifts}, 
     {movingMetrics, setMovingMetrics}
 ) => {
-    if(!movingMetrics.isMoveStarted) {
-        return
-    }
-
-    if(isBacklashGot(carouselPageShifts)) {
+    if(!movingMetrics.isMovingStarted) {
         return
     }
 
@@ -72,6 +68,11 @@ export const onMovingContinues = (
 
     const nextShift = (nextMovingMetrics.deltaX / getCarouselWidth()) * ONE_HUNDRED_PERCENT
     const nextShifts = carouselPageShifts.map(shift => shift + nextShift)
+
+    if(isBacklashGot(nextShifts)) {
+        return
+    }
+
     setCarouselPageShifts(nextShifts)
     setMovingMetrics(nextMovingMetrics)
 }

@@ -29,3 +29,5 @@ export const initialMovingMetrics = {
     isMovingStarted: false,
     dPath: 0
 }
+
+export const LEFT_MOUSE_BUTTON_CODE = 0

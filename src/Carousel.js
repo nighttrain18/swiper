@@ -35,13 +35,13 @@ const Carousel = ({
 
     return (
         <div id="carousel">
-            <ul className="carousel__page-list"
-                onMouseDown={evt => onMouseDown(evt, M, setCarouselPageShifts)}
+            <ul id="carousel__page-list"
+                onMouseDown={evt => onMouseDown(evt, M, setClassesToCarouselPages)}
                 onMouseMove={evt => onMouseMove(evt, S, M)}
                 onMouseUp={evt => onMouseUp(evt, S, M, setClassesToCarouselPages)}
                 onMouseOut={evt => onMouseOut(evt, S, M, setClassesToCarouselPages)}
-                onTouchStart={evt => onTouchStart(evt, S, M, setClassesToCarouselPages)}
-                onTouchMove={evt => onTouchMove(evt, S, M, setClassesToCarouselPages)}
+                onTouchStart={evt => onTouchStart(evt, M, setClassesToCarouselPages)}
+                onTouchMove={evt => onTouchMove(evt, S, M)}
                 onTouchEnd={evt => onTouchEnd(evt, S, M, setClassesToCarouselPages)} >
             {
                 React.Children.toArray(children).map((child, index) => {
